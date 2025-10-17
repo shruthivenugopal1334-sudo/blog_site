@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Reviews - Beyond Pages</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/posts">Reviews</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+        <h1>All Book Reviews</h1>
+
+        <div class="posts-grid">
+            <div class="post-card" id="post1">
+                <img src="/static/images/book1.jpg" alt="The Alchemist">
+                <h3>The Alchemist</h3>
+                <p>A magical journey about following your dreams.</p>
+                <button onclick="alert('Liked!')">👍 Like</button>
+            </div>
+
+            <div class="post-card" id="post2">
+                <img src="/static/images/book2.jpg" alt="1984">
+                <h3>1984</h3>
+                <p>A classic dystopian novel exploring freedom and control.</p>
+                <button onclick="alert('Liked!')">👍 Like</button>
+            </div>
+
+            <div class="post-card" id="post3">
+                <img src="/static/images/book3.jpg" alt="To Kill a Mockingbird">
+                <h3>To Kill a Mockingbird</h3>
+                <p>A moving story about justice, morality, and humanity.</p>
+                <button onclick="alert('Liked!')">👍 Like</button>
+            </div>
+
+            <div class="post-card" id="post4">
+                <img src="/static/images/book4.jpg" alt="Pride and Prejudice">
+                <h3>Pride and Prejudice</h3>
+                <p>A timeless tale of love, society, and personal growth.</p>
+                <button onclick="alert('Liked!')">👍 Like</button>
+            </div>
+            <div class="post-card" id="post5">
+                <img src="/static/images/ps.jpg" alt="Ponniyin Selvan">
+                <h3>Ponniyin Selvan</h3>
+                <p>An epic saga of love, loyalty, and intrigue set in the grandeur of the Chola dynasty.</p>
+                <button onclick="alert('Liked!')">👍 Like</button>
+            </div>
+            <div class="post-card" id="post6">
+                <img src="/static/images/lr.jpg" alt="Lord of Rings">
+                <h3>Lord of Rings</h3>
+                <p>A timeless journey of friendship and courage in a battle against the rising darkness of Middle-earth</p>
+                <button onclick="alert('Liked!')">👍 Like</button>
+            </div>
+        </div>
+
+        <h2>Comments</h2>
+        <ul>
+            {% for c in comments %}
+            <li><strong>{{ c.name }}</strong>: {{ c.comment }} 
+                <button onclick="alert('Liked!')">👍</button>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h3>Add Your Review</h3>
+        <form method="POST" style="text-align: center; color:white">
+            <input type="text" name="name" placeholder="Your Name" required><br><br>
+            <textarea name="comment" placeholder="Your comment" required></textarea><br><br>
+            <button type="submit">Post Comment</button>
+        </form>
+    </div>
+</body>
+</html>

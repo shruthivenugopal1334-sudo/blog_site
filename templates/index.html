@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beyond Pages - Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body onload="showAlert()">
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/posts">Reviews</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+        <h1>Welcome to Beyond Pages</h1>
+        <p style="text-align: center;">Your hub for insightful book reviews and literary adventures!</p>
+
+        <!-- Blog Banner -->
+        <div class="banner">
+            <img src="/static/images/front.jpg" alt="Beyond Pages Banner">
+        </div>
+
+        <!-- Featured Book Reviews -->
+        <div class="featured-posts">
+            <h2>Featured Reviews</h2>
+            <div class="posts-grid">
+                <div class="post-card">
+                    <img src="/static/images/hp.png" alt="Book 1">
+                    <h3><a href="/posts#post1">Harry Potter</a></h3>
+                    <p>A thrilling return to Hogwarts, where dark secrets lurk and danger slithers beneath the surface</p>
+                </div>
+                <div class="post-card">
+                    <img src="/static/images/secret of garden.jpg" alt="Book 2">
+                    <h3><a href="/posts#post2">Secret of Garden</a></h3>
+                    <p>A heartwarming tale of healing and growth as a hidden garden transforms lives and spirits.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
